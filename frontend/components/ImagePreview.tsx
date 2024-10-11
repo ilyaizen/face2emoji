@@ -13,14 +13,16 @@ export function ImagePreview({ file }: ImagePreviewProps) {
 
   return (
     <div className="mt-4">
-      <Image
-        src={imageSource}
-        alt="Preview"
-        width={300}
-        height={300}
-        objectFit="contain"
-        className="rounded-md"
-      />
+      <h3 className="text-lg font-semibold mb-2">Preview</h3>
+      <div className="relative w-full h-64">
+        <Image
+          src={imageSource}
+          alt="Preview"
+          fill
+          style={{ objectFit: "cover" }}
+          className="rounded-lg"
+        />
+      </div>
     </div>
   );
 }

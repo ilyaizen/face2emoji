@@ -6,16 +6,16 @@ interface EmojiResultProps {
 
 export function EmojiResult({ url }: EmojiResultProps) {
   return (
-    <div className="mt-4">
-      <h2 className="text-xl font-semibold mb-2">Your Emoji Result:</h2>
-      <Image
-        src={url}
-        alt="Emoji Result"
-        width={400}
-        height={400}
-        objectFit="contain"
-        className="rounded-md"
-      />
+    <div className="flex flex-col items-center justify-center">
+      <div className="relative w-32 h-32">
+        <Image
+          src={url}
+          alt="Emoji Result"
+          fill
+          style={{ objectFit: "contain" }}
+          className="rounded-md"
+        />
+      </div>
     </div>
   );
 }
